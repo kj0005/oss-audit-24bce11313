@@ -28,20 +28,4 @@ Reads a log file and counts occurrences of a keyword such as "error" and display
 ### Script 5: Open Source Manifesto Generator
 Generates a personalized open-source philosophy statement based on user input and saves it to a file.
 
-## How to Run the Scripts
 
-```bash
-chmod +x script1.sh
-./script1.sh
-
-chmod +x script2.sh
-./script2.sh
-
-chmod +x script3.sh
-./script3.sh
-
-chmod +x script4.sh
-./script4.sh /var/log/syslog
-
-chmod +x script5.sh
-./script5.sh
