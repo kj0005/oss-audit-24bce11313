@@ -63,5 +63,5 @@ To run these scripts in a standard Linux terminal or a GitHub Codespace, follow 
 * `README.md`: Project documentation and instructions (this file).
 
 ---
-*Developed by Kshitij Verma (24BCE11313) as part of the VITyarthi Capstone Project for Open Source Software.*
+
 
