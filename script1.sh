@@ -1,23 +1,32 @@
 #!/bin/bash
 # Script 1: System Identity Report
-# Author: Kshitij Verma
+# Author: [Your Name] | Course: Open Source Software
+# Purpose: Display system information and OSS license details.
 
-STUDENT_NAME="Kshitij Verma"
-SOFTWARE_CHOICE="Git"
+# --- Variables ---
+STUDENT_NAME="[Your Name]"         
+SOFTWARE_CHOICE="Git (Version Control System)"      
 
+# --- System info gathered using command substitution ---
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
 UPTIME=$(uptime -p)
-DATE=$(date)
-DISTRO=$(grep PRETTY_NAME /etc/os-release | cut -d= -f2)
+DISTRO=$(cat /etc/os-release | grep "PRETTY_NAME" | cut -d'=' -f2 | tr -d '"')
+CURRENT_DATE=$(date '+%A, %d %B %Y')
 
-echo "================================"
-echo "Open Source Audit — $STUDENT_NAME"
-echo "Software: $SOFTWARE_CHOICE"
-echo "================================"
-echo "Distro  : $DISTRO"
-echo "Kernel  : $KERNEL"
-echo "User    : $USER_NAME"
-echo "Uptime  : $UPTIME"
-echo "Date    : $DATE"
-echo "License : GPL (Linux Kernel)"
+# --- Display Output ---
+echo "================================================="
+echo "   Open Source Audit Report — $STUDENT_NAME"
+echo "================================================="
+echo "System Date : $CURRENT_DATE"
+echo "Distro Name : $DISTRO"
+echo "Kernel Ver  : $KERNEL"
+echo "Current User: $USER_NAME"
+echo "Uptime      : $UPTIME"
+echo "-------------------------------------------------"
+echo "Audit Focus : $SOFTWARE_CHOICE"
+echo "-------------------------------------------------"
+echo "OSS MESSAGE: This operating system is covered under"
+echo "the GNU General Public License (GPL), ensuring your"
+echo "freedom to run, study, share, and modify the code."
+echo "================================================="
