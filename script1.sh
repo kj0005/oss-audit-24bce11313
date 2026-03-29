@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script 1: System Identity Report
-# Author: [Your Name] | Course: Open Source Software
+# Author: Kshitij Verma | Course: Open Source Software
 # Purpose: Display system information and OSS license details.
 
 # --- Variables ---
