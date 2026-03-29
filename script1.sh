@@ -4,7 +4,7 @@
 # Purpose: Display system information and OSS license details.
 
 # --- Variables ---
-STUDENT_NAME="[Your Name]"         
+STUDENT_NAME="Kshitij Verma"         
 SOFTWARE_CHOICE="Git (Version Control System)"      
 
 # --- System info gathered using command substitution ---
