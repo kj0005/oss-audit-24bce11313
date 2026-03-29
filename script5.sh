@@ -1,16 +1,40 @@
 #!/bin/bash
 # Script 5: Open Source Manifesto Generator
+# Author: Kshitij Verma
+# Purpose: Generates a personalized philosophy statement.
 
-echo "Answer the following questions:"
+echo "--- Open Source Manifesto Generator ---"
+echo ""
 
-read -p "1. Tool you use daily: " TOOL
-read -p "2. Freedom means: " FREEDOM
-read -p "3. What will you build: " BUILD
+# --- Simulation for Online Compiler ---
+# We hard-code the answers here so it doesn't "Time Out"
+TOOL="Git"
+FREEDOM="Collaboration"
+BUILD="an Open Source App"
 
-DATE=$(date)
+echo "1. Tool you use daily: $TOOL"
+echo "2. What freedom means: $FREEDOM"
+echo "3. What you will build: $BUILD"
+
+# Set the date and the output filename
+DATE=$(date '+%d %B %Y')
 OUTPUT="manifesto.txt"
 
-echo "On $DATE, I believe in open source. I use $TOOL daily. Freedom means $FREEDOM to me. I will build $BUILD and share it with the community." > $OUTPUT
+# --- Compose the Manifesto Paragraph ---
+echo "==========================================" > "$OUTPUT"
+echo "        MY OPEN SOURCE MANIFESTO          " >> "$OUTPUT"
+echo "          Date: $DATE                     " >> "$OUTPUT"
+echo "==========================================" >> "$OUTPUT"
+echo "" >> "$OUTPUT"
+echo "As a developer, I believe that software like $TOOL is the foundation" >> "$OUTPUT"
+echo "of modern technology. To me, open source represents $FREEDOM." >> "$OUTPUT"
+echo "In the spirit of sharing, I commit to building $BUILD" >> "$OUTPUT"
+echo "and releasing it to the community to empower others." >> "$OUTPUT"
 
-echo "Manifesto saved in $OUTPUT"
-cat $OUTPUT
+echo ""
+echo "✅ Manifesto successfully saved to: $OUTPUT"
+echo "--- File Content Below ---"
+echo ""
+
+# Display the final file content
+cat "$OUTPUT"
